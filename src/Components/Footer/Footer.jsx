@@ -1,0 +1,58 @@
+import React, { useContext, useState } from 'react';
+import { Grid, Typography, AppBar } from '@mui/material';
+import { ThemeContext } from '../../Context/ThemeContext';
+import './styles.css';
+import reactLogo from '../../assets/react-icon.png';
+import linkedIn from '../../assets/linkedin.png'
+import github from '../../assets/github.png'
+import wp from '../../assets/whatsapp.png'
+import insta from '../../assets/instagram.png'
+import Myweb from '../../assets/myweb.png'
+import { Link } from 'react-router-dom';
+
+const Footer = () => {
+
+
+  const { isDarkMode } = useContext(ThemeContext);
+
+
+  return (
+    <AppBar position='sticky'>
+      <Grid container justifyContent='center'>
+        {/* <Grid item xl={1.5} lg={1.5} md={1.5} sm={0.75} xs={1}></Grid> */}
+        {/* <Grid item xl={3} lg={3} md={3} sm={3.5} xs={2}></Grid> */}
+
+        <Grid item xl={1} lg={1} md={4} sm={3} xs={1.5}>
+          <Link to="#">
+            <img src={Myweb} alt="my website" className='myweb' />
+          </Link>
+        </Grid>
+
+        <Grid item xl={4} lg={4} md={2.45} sm={4.21} xs={5.17}>
+          <Typography variant='body2' sx={{ marginTop: 1.9, color: isDarkMode ? 'white' : 'black' }}>
+            This Website was made with
+          </Typography>
+        </Grid>
+        <Grid item xl={0.75} lg={0.75} md={0.75} sm={1} xs={1} sx={{ marginTop: 1.3 }}>
+          <img src={reactLogo} className="logoreact" alt="React logo" />
+        </Grid>
+        <Grid item xl={1} lg={1} md={2} sm={0.5} xs={1}></Grid>
+        <Grid item xl={0.36} lg={0.4} md={0.5} sm={0.6} xs={0} sx={{ marginTop: 1.3 }}>
+          <img src={linkedIn} className="logolinkedin" alt="LinkedIn logo" />
+        </Grid>
+        <Grid item xl={0.36} lg={0.4} md={0.5} sm={0.6} xs={0} sx={{ marginTop: 1.3 }}>
+          <img src={github} className="logogithub" alt="GitHub logo" />
+        </Grid>
+        <Grid item xl={0.36} lg={0.4} md={0.5} sm={0.6} xs={0} sx={{ marginTop: 1.3 }}>
+          <img src={wp} className="logowp" alt="Whatsapp logo" />
+        </Grid>
+        <Grid item xl={0.36} lg={0.4} md={0.5} sm={0.6} xs={0} sx={{ marginTop: 1.3 }}>
+          <img src={insta} className="logoinsta" alt="Instagram logo" />
+        </Grid>
+
+      </Grid>
+    </AppBar>
+  );
+};
+
+export default Footer;

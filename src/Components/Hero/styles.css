@@ -1,0 +1,151 @@
+/* styles.css */
+
+.myname {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.toppart{
+  padding-top: 10%;
+  padding-left: 100px;
+}
+
+@media(min-width : 960px) {
+  .illustration {
+    margin-top:-100px;
+    width: 80vmin;
+  }
+}
+
+@media(max-width : 960px) {
+  .illustration {
+    display: none;
+  }
+}
+
+
+.sub {
+  font-weight: bolder;
+  color: rgb(71, 136, 158);
+  text-shadow: 0px 0px 10px rgba(160, 231, 206, 0.6);
+  padding-left: 100px;
+}
+
+.sub1 {
+  padding-left: 100px;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(250px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+@keyframes fadeInUp1 {
+  0% {
+    opacity: 1;
+    /* display: none; */
+    /* transform: translateY(250px); */
+  }
+99%{
+  opacity: 1;
+}
+  100% {
+    opacity: 0;
+    /* display: block; */
+    /* transform: translateY(0); */
+  }
+}
+
+
+@keyframes fadeInUp2 {
+  0% {
+    opacity: 0;
+    /* display: none; */
+    /* transform: translateY(250px); */
+  }
+99%{
+  opacity: 0;
+}
+  100% {
+    opacity: 1;
+    /* display: block; */
+    /* transform: translateY(0); */
+  }
+}
+
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-250px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(250px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.fadeInUp {
+  animation-name: fadeInUp;
+}
+
+
+.fadeInUp1 {
+  animation-name: fadeInUp1;
+}
+
+.fadeInUp2 {
+  animation-name: fadeInUp2;
+}
+
+.fadeInLeft {
+  animation-name: fadeInLeft;
+}
+
+.fadeInRight {
+  animation-name: fadeInRight;
+}
+
+.animate {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+.animate1 {
+  animation-duration: 3s;
+  animation-fill-mode: both;
+}
+
+/* 
+.typing .react-typing-effect .cursor {
+  display: inline-block;
+}
+
+.typing .react-typing-effect {
+  display: inline-block;
+}
+
+/* Hide the cursor after typing is complete */
+/* .sub:not(.typing) .react-typing-effect .cursor {
+  display: none;
+}  */
