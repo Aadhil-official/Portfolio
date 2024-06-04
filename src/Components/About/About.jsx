@@ -25,16 +25,16 @@ function About() {
         <Grid item xl={6} lg={6} md={6} sm={6} xs={12} className="contentxs">
           <ScrollAnimation animateIn="fadeInLeft" className="animate">
             <Typography variant="body1" className="sub1">
-              Hi there! I'm Aadhil, a website developer with a passion for creating custom online experiences for my clients.
+              Hi there! I'm Aadhil, a website developer with a passion for creating custom websites.
               With a skill set including HTML, CSS, JavaScript, and React,
               I have the tools to bring any website vision to life.
             </Typography>
           </ScrollAnimation><br />
           <ScrollAnimation animateIn="fadeInLeft" className="animate">
             <Typography variant="body1" className="sub1">
-              But my services go beyond just custom development - I'm also proficient in using CMS systems like
-              WordPress and Shopify, making it easy for my clients to take control of their own websites and
-              keep them up to date.
+            Whenever possible, I also apply my passion for developing products with Sringboot and Modern 
+            Javascript Library and Framework React.js 
+            .Also I have done CMS systems with React.js and spring boot.
             </Typography>
           </ScrollAnimation><br />
           <ScrollAnimation animateIn="fadeInLeft" className="animate">
