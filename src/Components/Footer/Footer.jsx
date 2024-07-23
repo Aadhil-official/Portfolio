@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react';
-import { Grid, Typography, AppBar } from '@mui/material';
+import { Grid, Typography, AppBar, useTheme, useMediaQuery } from '@mui/material';
 import { ThemeContext } from '../../Context/ThemeContext';
 import './styles.css';
 import reactLogo from '../../assets/react-icon.png';
@@ -9,12 +9,18 @@ import wp from '../../assets/whatsapp.png'
 import insta from '../../assets/instagram.png'
 import Myweb from '../../assets/myweb.png'
 import { Link } from 'react-router-dom';
+import { createTheme, ThemeProvider, responsiveFontSizes } from '@mui/material/styles';
 
 const Footer = () => {
 
 
   const { isDarkMode } = useContext(ThemeContext);
 
+  let theme = createTheme();
+  theme = responsiveFontSizes(theme);
+
+  const theme1 = useTheme();
+  const isSmall = useMediaQuery(theme1.breakpoints.up('sm'));
 
   return (
     <AppBar position='sticky'>
@@ -28,11 +34,25 @@ const Footer = () => {
           </Link>
         </Grid>
 
-        <Grid item xl={4} lg={4} md={2.45} sm={4.21} xs={5.17}>
-          <Typography variant='body2' sx={{ marginTop: 1.9, color: isDarkMode ? 'white' : 'black' }}>
-            This Website was made with
-          </Typography>
-        </Grid>
+        {isSmall &&
+          <Grid item xl={4} lg={4} md={2.45} sm={4.21} xs={5.17}>
+            <ThemeProvider theme={theme}>
+              <Typography variant='body2' sx={{ marginTop: 1.9, color: isDarkMode ? 'white' : 'black' }}>
+                This Website was made with
+              </Typography>
+            </ThemeProvider>
+          </Grid>
+        }
+
+        {!isSmall &&
+          <Grid item xl={4} lg={4} md={2.45} sm={4.21} xs={4}>
+            <ThemeProvider theme={theme}>
+              <Typography variant='body2' sx={{ marginTop: 1.9, fontSize: '0.5rem', color: isDarkMode ? 'white' : 'black' }}>
+                This Website was made with
+              </Typography>
+            </ThemeProvider>
+          </Grid>}
+
         <Grid item xl={0.75} lg={0.75} md={0.75} sm={1} xs={1} sx={{ marginTop: 1.3 }}>
           <img src={reactLogo} className="logoreact" alt="React logo" />
         </Grid>
@@ -51,7 +71,7 @@ const Footer = () => {
         </Grid>
 
       </Grid>
-    </AppBar>
+    </AppBar >
   );
 };
 

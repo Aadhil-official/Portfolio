@@ -6,12 +6,12 @@
 
 .toppart{
   padding-top: 10%;
-  padding-left: 100px;
+  padding-left: 80px;
 }
 
 @media(min-width : 960px) {
   .illustration {
-    margin-top:-100px;
+    margin-top:-80px;
     width: 80vmin;
   }
 }
@@ -27,11 +27,11 @@
   font-weight: bolder;
   color: rgb(71, 136, 158);
   text-shadow: 0px 0px 10px rgba(160, 231, 206, 0.6);
-  padding-left: 100px;
+  padding-left: 80px;
 }
 
 .sub1 {
-  padding-left: 100px;
+  padding-left: 80px;
 }
 
 @keyframes fadeInUp {

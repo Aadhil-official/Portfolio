@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import "./styles.css";
 import emailIcon from "../../assets/email.png";
 import Phoneicon from "../../assets/phone-icon.png"
-import ConForm  from "../ConForm/ConForm";
+import ConForm from "../ConForm/ConForm";
 import { Grid, Typography, useMediaQuery, useTheme } from "@mui/material";
 
 
@@ -51,7 +51,7 @@ export function Contact() {
           <Grid item sm={8} xs={9.5} className="mycon">
             <Link className="contactcon" to="mailto:mohamedaadhil2446504@gmail.com?subject=Hello%20Aadhil&body=I%20would%20like%20to%20discuss...">
               <img src={emailIcon} alt="Email" />
-              <Typography variant="h6" >
+              <Typography variant="h6" sx={{ fontSize: '0.7rem' }} >
                 mohamedaadhil2446504@gmail.com
               </Typography>
             </Link>
@@ -61,18 +61,18 @@ export function Contact() {
           <Grid item sm={8} xs={9.5} className="mycon">
             <Link className="contactcon" to="tel:+94750213273">
               <img src={Phoneicon} alt="Phone no" />
-              <Typography variant="body1" >
+              <Typography variant="body1" sx={{ fontSize: '0.7rem' }}>
                 (+94) 750213273
               </Typography>
             </Link>
           </Grid>
         </>
       )}
-      <Grid item xl={12} lg={12} md={12} sm={12} xs={12}></Grid><br/><br/>
+      <Grid item xl={12} lg={12} md={12} sm={12} xs={12}></Grid><br /><br />
       <Grid item xl={5} lg={5} md={9} sm={10} xs={11} className="box" textAlign='center'>
-        <ConForm/>
+        <ConForm />
       </Grid>
-      <Grid item xl={12} lg={12} md={12} sm={12} xs={12}></Grid><br/><br/>
+      <Grid item xl={12} lg={12} md={12} sm={12} xs={12}></Grid><br /><br />
     </Grid>
   )
 }

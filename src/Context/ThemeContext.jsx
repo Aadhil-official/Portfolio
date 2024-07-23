@@ -2,18 +2,24 @@
 import React, { createContext, useState } from 'react';
 import { createTheme, ThemeProvider, responsiveFontSizes } from '@mui/material';
 import CssBaseline from '@mui/material/CssBaseline';
-
-import gifdark from '../assets/dark.gif';
+// import hello from '../assets/Hello.gif';
+// import gifdark from '../assets/dark.gif';
 // import giflight from '../assets/light.gif';
 
 const ThemeContext = createContext();
 
 const ThemeProviderWrapper = ({ children }) => {
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(true);
 
   const toggleTheme = () => {
     setIsDarkMode((prevMode) => !prevMode);
   };
+
+  // const stylebackdrop = {
+  //   backdropFilter: blur('20px'),
+  //   WebkitBackdropFilter: blur('20px'),
+  //   backgroundColor: isDarkMode ? 'rgba(0, 0, 0, 0.8)' : 'rgba(255, 255, 255, 0.8)'
+  // }
 
   let theme = createTheme({
     palette: {
@@ -28,8 +34,12 @@ const ThemeProviderWrapper = ({ children }) => {
       MuiAppBar: {
         styleOverrides: {
           root: {
-            width: '100%',
-            backgroundColor: isDarkMode ? 'rgba(0, 0, 0, 0.8)' : 'rgba(255, 255, 255, 0.8)',
+            // width: '99.5%',
+            // padding:0,
+            // margin:0,
+            backdropFilter: 'blur(5px)',
+            WebkitBackdropFilter: 'blur(5px)',
+            backgroundColor: isDarkMode ? 'rgba(0, 0, 0, 0.2)' : 'rgba(255, 255, 255, 0.2)',
           },
         },
       },
@@ -38,7 +48,7 @@ const ThemeProviderWrapper = ({ children }) => {
 
   theme.typography.h4["@media (max-width:600px)"] = {
     fontSize: '0.8rem', // Smaller font size for xs screens
-    padding: '10px'
+    padding: '8.5px'
   };
 
   theme = responsiveFontSizes(theme);
@@ -55,7 +65,7 @@ const ThemeProviderWrapper = ({ children }) => {
               left: 0,
               width: '100%',
               height: '100%',
-              backgroundImage: `url(${isDarkMode ? gifdark : "gray"})`,
+              // backgroundImage: `url(${isDarkMode ? gifdark : hello})`,
               backgroundSize: 'cover',
               backgroundRepeat: 'no-repeat',
               backgroundPosition: 'left',

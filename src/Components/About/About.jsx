@@ -13,7 +13,7 @@ import Cssicon from '../../assets/linkedin.png';
 function About() {
   return (
     <>
-      <br /><br /><br /><br /><br /><br />
+      <br /><br /><br />
       <Grid container id="about">
         <Grid item xl={12} lg={12} md={12} sm={12} xs={12}>
           <ScrollAnimation animateIn="fadeInLeft" className="animate">

@@ -17,14 +17,14 @@ const Nav = () => {
       mode: darkMode ? 'dark' : 'light',
     },
     components: {
-      MuiAppBar: {
-        styleOverrides: {
-          root: {
-            backgroundColor: 'transparent',
-            boxShadow: 'none',
-          },
-        },
-      },
+      // MuiAppBar: {
+      //   styleOverrides: {
+      //     root: {
+      //       backgroundColor: 'transparent',
+      //       boxShadow: 'none',
+      //     },
+      //   },
+      // },
     },
   });
 

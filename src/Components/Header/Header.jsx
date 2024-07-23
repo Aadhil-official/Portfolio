@@ -59,7 +59,7 @@ const Header = () => {
   const theme1 = createTheme();
 
   theme1.typography.h6 = {
-    fontSize: '0.7rem',
+    fontSize: '0.49rem',
     [theme1.breakpoints.up('sm')]: {
       fontSize: '0.8rem',
       margin: '18px'
@@ -77,7 +77,7 @@ const Header = () => {
         {/* <Toolbar sx={{width:'97%'}}> */}
         <Grid container position='absolute'>
           {/* <ThemeProvider theme={theme1}> */}
-            <Grid item xl={3} lg={3.7} md={3.4} sm={3} xs={2.3} textAlign='center'>
+            <Grid item xl={3} lg={3.7} md={3.4} sm={3} xs={3} textAlign='center'>
               <HashLink smooth to="#home" className='navlogo'>
                 <Typography sx={{ m: 1, color: isDarkMode ? 'white' : 'black' }} variant="h4">{"<#Axd"}
                   {"hil>"}</Typography>
@@ -85,18 +85,18 @@ const Header = () => {
             </Grid>
           {/* </ThemeProvider> */}
           <ThemeProvider theme={theme1}>
-            <Grid item xl={1} lg={1} md={1.1} sm={1.2} xs={1.4}>
+            <Grid item xl={1} lg={1} md={1.1} sm={1.2} xs={1.2}>
               <NavHashLink className='navcontent' smooth to="#home">
                 <Typography variant="h6" sx={{ m: 2.3, color: isDarkMode ? 'white' : 'black' }}>HOME</Typography>
               </NavHashLink>
             </Grid>
             {/* <Grid item xl={0} lg={0} md={0} sm={0} xs={0}></Grid> */}
-            <Grid item xl={1.5} lg={1.5} md={1.85} sm={2.25} xs={2.4}>
+            <Grid item xl={1.5} lg={1.5} md={1.85} sm={2.25} xs={1.8}>
               <NavHashLink className='navcontent' smooth to="#about">
-                <Typography variant="h6" sx={{ m: 2.3, color: isDarkMode ? 'white' : 'black' }}>ABOUT ME</Typography>
+                <Typography variant="h6" sx={{ m: 2.3, color: isDarkMode ? 'white' : 'black' }}>ABOUT&nbsp;&nbsp;ME</Typography>
               </NavHashLink>
             </Grid>
-            <Grid item xl={1} lg={1} md={1.45} sm={1.7} xs={2}>
+            <Grid item xl={1} lg={1} md={1.45} sm={1.7} xs={1.5}>
               <NavHashLink className='navcontent' smooth to="#project">
                 <Typography variant="h6" sx={{ m: 2.3, color: isDarkMode ? 'white' : 'black' }}>PROJECT</Typography>
               </NavHashLink>
@@ -106,15 +106,15 @@ const Header = () => {
                 <Typography variant="h6" sx={{ m: 2.3, color: isDarkMode ? 'white' : 'black' }}>CONTACT</Typography>
               </NavHashLink>
             </Grid>
-            <Grid item xl={4.5} lg={3.8} md={3.3} sm={3.1} xs={2.7}></Grid>
+            {/* <Grid item xl={4.5} lg={3.8} md={3.3} sm={3.1} xs={1.5}></Grid> */}
           </ThemeProvider>
         </Grid>
-        <Grid container justifyContent='right'>
-          <Grid item xl={1} lg={1} md={1} sm={1} xs={1.5}>
+        <Grid container textAlign='right'>
+          <Grid item xl={12} lg={12} md={12} sm={12} xs={12}>
             <FormControlLabel
               control={
                 <MaterialUISwitch
-                  sx={{ m: 1.6 }}
+                  sx={{ m: 1.3,mr:-2 }}
                   checked={isDarkMode}
                   onChange={toggleTheme}
                 // inputProps={{ 'aria-label': 'controlled' }}
