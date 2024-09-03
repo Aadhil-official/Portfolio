@@ -41,3 +41,13 @@
   background-color: rgb(71, 136, 158);
   border-radius: 50px;
 }
+
+.githublinkl{
+  text-decoration: none;
+  color: white;
+}
+
+.githublinkd{
+  text-decoration: none;
+  color: black;
+}

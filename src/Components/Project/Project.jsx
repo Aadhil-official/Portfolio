@@ -1,11 +1,13 @@
 import { Grid, Typography } from "@mui/material";
-import React from "react"
+import React, { useContext } from "react"
 import githubIcon from '../../assets/github.png'
 import './styles.css'
 import ScrollAnimation from "react-animate-on-scroll";
-// import externalLink from '../../assets/external-link.png'
+import { ThemeContext } from '../../Context/ThemeContext';
 
 function Project() {
+  
+  const { isDarkMode } = useContext(ThemeContext);
   return (
     <>
       <br /><br />
@@ -29,10 +31,10 @@ function Project() {
                 <Grid item textAlign='center'>
                   <Typography variant="h6">
                     <img src={githubIcon} className="linklogo" alt="Visit site" />
-                    <a style={{textDecoration:'none'}} href="https://github.com/Team-MoraTech/Us.git" target="_blank" rel="noreferrer">
+                    <a className={isDarkMode?"githublinkl":"githublinkd"} href="https://github.com/Team-MoraTech/Us.git" target="_blank" rel="noreferrer">
                       <span>Back </span>
                     </a>
-                    <a style={{textDecoration:'none'}} href="https://github.com/Aadhil-official/L2S4-Sofware-Project-Back-end.git" target="_blank" rel="noreferrer">
+                    <a className={isDarkMode?"githublinkl":"githublinkd"} href="https://github.com/Aadhil-official/L2S4-Sofware-Project-Back-end.git" target="_blank" rel="noreferrer">
                       <span> Front </span>
                     </a>
                   </Typography>
@@ -64,9 +66,17 @@ function Project() {
                 {/* <header> */}
                 {/* <svg width="50" xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="#23ce6b " stroke-width="1" stroke-linecap="round" stroke-linejoin="round" ><title>Folder</title><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg> */}
                 {/* <div className="project-links"> */}
-                <a href="https://github.com/Team-MoraTech/Us.git" target="_blank" rel="noreferrer">
-                  <img src={githubIcon} className="linklogo" alt="Visit site" />
-                </a>
+                <Grid item textAlign='center'>
+                  <Typography variant="h6">
+                    <img src={githubIcon} className="linklogo" alt="Visit site" />
+                    <a className={isDarkMode?"githublinkl":"githublinkd"} href="https://github.com/Team-MoraTech/Us.git" target="_blank" rel="noreferrer">
+                      <span>Back </span>
+                    </a>
+                    <a className={isDarkMode?"githublinkl":"githublinkd"} href="https://github.com/Aadhil-official/L2S4-Sofware-Project-Back-end.git" target="_blank" rel="noreferrer">
+                      <span> Front </span>
+                    </a>
+                  </Typography>
+                </Grid>
                 {/* <a href="https://medibook.vinayaksingh.com" target="_blank" rel="noreferrer">
                       <img src={externalLink} className="linklogo" alt="Visit site" />
                     </a> */}
@@ -93,9 +103,17 @@ function Project() {
                 {/* <header> */}
                 {/* <svg width="50" xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="#23ce6b " stroke-width="1" stroke-linecap="round" stroke-linejoin="round" ><title>Folder</title><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg> */}
                 {/* <div className="project-links"> */}
-                <a href="https://github.com/Team-MoraTech/Us.git" target="_blank" rel="noreferrer">
-                  <img src={githubIcon} className="linklogo" alt="Visit site" />
-                </a>
+                <Grid item textAlign='center'>
+                  <Typography variant="h6">
+                    <img src={githubIcon} className="linklogo" alt="Visit site" />
+                    <a className={isDarkMode?"githublinkl":"githublinkd"} href="https://github.com/Team-MoraTech/Us.git" target="_blank" rel="noreferrer">
+                      <span>Back </span>
+                    </a>
+                    <a className={isDarkMode?"githublinkl":"githublinkd"} href="https://github.com/Aadhil-official/L2S4-Sofware-Project-Back-end.git" target="_blank" rel="noreferrer">
+                      <span> Front </span>
+                    </a>
+                  </Typography>
+                </Grid>
                 {/* <a href="https://medibook.vinayaksingh.com" target="_blank" rel="noreferrer">
                       <img src={externalLink} className="linklogo" alt="Visit site" />
                     </a> */}
@@ -124,9 +142,17 @@ function Project() {
                 {/* <header> */}
                 {/* <svg width="50" xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="#23ce6b " stroke-width="1" stroke-linecap="round" stroke-linejoin="round" ><title>Folder</title><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg> */}
                 {/* <div className="project-links"> */}
-                <a href="https://github.com/Team-MoraTech/Us.git" target="_blank" rel="noreferrer">
-                  <img src={githubIcon} className="linklogo" alt="Visit site" />
-                </a>
+                <Grid item textAlign='center'>
+                  <Typography variant="h6">
+                    <img src={githubIcon} className="linklogo" alt="Visit site" />
+                    <a className={isDarkMode?"githublinkl":"githublinkd"} href="https://github.com/Team-MoraTech/Us.git" target="_blank" rel="noreferrer">
+                      <span>Back </span>
+                    </a>
+                    <a className={isDarkMode?"githublinkl":"githublinkd"} href="https://github.com/Aadhil-official/L2S4-Sofware-Project-Back-end.git" target="_blank" rel="noreferrer">
+                      <span> Front </span>
+                    </a>
+                  </Typography>
+                </Grid>
                 {/* <a href="https://medibook.vinayaksingh.com" target="_blank" rel="noreferrer">
                       <img src={externalLink} className="linklogo" alt="Visit site" />
                     </a> */}
