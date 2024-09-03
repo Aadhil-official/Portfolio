@@ -36,3 +36,8 @@
 .linklogo{
   height: 5vmin;
 }
+
+.project{
+  background-color: rgb(71, 136, 158);
+  border-radius: 50px;
+}

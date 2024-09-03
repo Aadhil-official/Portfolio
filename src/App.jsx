@@ -21,7 +21,7 @@ function App() {
           <Header />
           <Home />
           <About />
-          {/* <Project/> */}
+          <Project/>
           <Contact />
           {/* <Routes> */}
           {/* <Route path="/" element={<Home />} />

@@ -45,11 +45,12 @@ function Hero() {
             >
               <ReactTypingEffect
                 text="Full Stack Developer"
-                speed={50}
+                speed={20}
                 eraseSpeed={0}
-                typingDelay={1000}
+                typingDelay={30}
               />
             </Typography>
+
             <Typography
               variant="h5"
               className="sub animate1 fadeInUp2"
