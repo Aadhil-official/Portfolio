@@ -28,7 +28,7 @@ const Footer = () => {
         {/* <Grid item xl={1.5} lg={1.5} md={1.5} sm={0.75} xs={1}></Grid> */}
         {/* <Grid item xl={3} lg={3} md={3} sm={3.5} xs={2}></Grid> */}
 
-        <Grid item xl={1} lg={1} md={4} sm={3} xs={1.5}>
+        <Grid item xl={1} lg={1.5} md={4} sm={3} xs={1.5}>
           <Link to="#">
             <img src={Myweb} alt="my website" className='myweb' />
           </Link>

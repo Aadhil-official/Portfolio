@@ -12,7 +12,7 @@ function ConForm() {
 
     const validateForm = z.object({
         subject: z.string().min(1, { message: "Enter the subject" }),
-        object: z.string().min(1, { message: "Enter the subject" })
+        object: z.string().min(1, { message: "Enter the object" })
     });
 
     const handleSubmit = () => {
@@ -32,10 +32,10 @@ function ConForm() {
 
         } else {
             const formattedError = result.error.format();
-            if (formattedError.subject?._errors) {
-                error(String(formattedError.subject?._errors));
-            } else if (formattedError.object?._errors) {
+            if (formattedError.object?._errors) {
                 error(String(formattedError.object?._errors));
+            } else if (formattedError.subject?._errors) {
+                error(String(formattedError.subject?._errors));
             }
         }
     };
@@ -77,7 +77,7 @@ function ConForm() {
                         />
                     }
                     label={<Typography variant='h5'>I'm not a robot</Typography>}
-                /><br/>
+                /><br />
                 <Button variant='contained' onClick={handleSubmit} size='large' sx={{
                     width: '30%',
                     backgroundColor: 'rgb(71, 136, 158)',

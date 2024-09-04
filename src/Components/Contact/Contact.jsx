@@ -28,7 +28,7 @@ export function Contact() {
 
       {isMdOrLarger ? (
         <>
-          <Grid item xl={3.5} lg={3.5} md={4.5} className="mycon">
+          <Grid item xl={3.6} lg={4.2} md={4.5} className="mycon">
             <Link className="contactcon" to="mailto:mohamedaadhil2446504@gmail.com?subject=Hello%20Aadhil&body=I%20would%20like%20to%20discuss...">
               <img src={emailIcon} alt="Email" />
               <Typography variant="body1" sx={{ fontWeight: 'bold' }}>
@@ -37,9 +37,9 @@ export function Contact() {
             </Link>
           </Grid>
           <Grid item xl={1} lg={1} md={0.5}></Grid>
-          <Grid item xl={3.5} lg={3.5} md={4.5} className="mycon">
+          <Grid item xl={3.5} lg={4.2} md={4.5} className="mycon">
             <Link className="contactcon" to="tel:+94750213273">
-              <img src={Phoneicon} alt="Phone no" />
+              <img src={Phoneicon} alt="Phone no" />&nbsp;&nbsp;&nbsp;&nbsp;
               <Typography variant="body1" sx={{ fontWeight: 'bold' }}>
                 (+94) 750213273
               </Typography>
@@ -69,7 +69,7 @@ export function Contact() {
         </>
       )}
       <Grid item xl={12} lg={12} md={12} sm={12} xs={12}></Grid><br /><br />
-      <Grid item xl={5} lg={5} md={9} sm={10} xs={11} className="box" textAlign='center'>
+      <Grid item xl={5} lg={6} md={9} sm={10} xs={11} className="box" textAlign='center'>
         <ConForm />
       </Grid>
       <Grid item xl={12} lg={12} md={12} sm={12} xs={12}></Grid><br /><br />
