@@ -64,7 +64,9 @@ function About() {
           </Grid>
         </Grid>
         <Grid item xl={6} lg={6} md={6} sm={12} xs={12}>
-          <Avatar src={MyPic} sx={{ width: 300, height: 320,marginRight:'auto', marginLeft:'auto' }}/>
+          <ScrollAnimation animateIn="fadeInRight" className="animate">
+            <Avatar src={MyPic} sx={{ width: 300, height: 320, marginRight: 'auto', marginLeft: 'auto' }} />
+          </ScrollAnimation>
         </Grid>
       </Grid>
     </>

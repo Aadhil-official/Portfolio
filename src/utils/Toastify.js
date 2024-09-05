@@ -7,3 +7,11 @@ export function success(message){
 export function error(message) {
     toast.error(message);
 }
+
+export function loading(message) {
+    toast.loading(message);
+}
+
+export function dismiss(toastId) {
+  toast.dismiss(toastId);
+}

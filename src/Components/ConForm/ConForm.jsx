@@ -2,8 +2,7 @@ import { Box, Button, Checkbox, FormControlLabel, TextField, Typography } from '
 import React, { useState } from 'react';
 import { z } from 'zod';
 import axios from 'axios';
-import { error, success } from '../../utils/Toastify';
-
+import { dismiss, error, loading as showLoading, success } from '../../utils/Toastify';
 
 function ConForm() {
     const [subject, setSubject] = useState("");
@@ -17,6 +16,8 @@ function ConForm() {
 
     const handleSubmit = () => {
 
+        const loadingToast = showLoading("Sending email...");
+
         const data = {
             subject: subject,
             object: object
@@ -26,19 +27,32 @@ function ConForm() {
         if (result.success && isRobot) {
             axios.post('http://localhost:8080/api/auth/sendemail', data)
                 .then(() => {
-                    success('Login successful!')
+                    success("Send message successful!");
+                    resetAll();
+                    dismiss(loadingToast);
                 })
-                .catch(() => error("Server error"));
+                .catch(() => {
+                    dismiss(loadingToast);
+                    error("Server error")
+                });
 
         } else {
+            dismiss(loadingToast);
             const formattedError = result.error.format();
             if (formattedError.object?._errors) {
                 error(String(formattedError.object?._errors));
             } else if (formattedError.subject?._errors) {
                 error(String(formattedError.subject?._errors));
+            } else{
+                error("Make sure click on I'm not robot...");
             }
         }
     };
+
+    const resetAll = () => {
+        setSubject("");
+        setObject("");
+    }
 
     return (
         <>
@@ -55,6 +69,7 @@ function ConForm() {
                     label="Object"
                     type='text'
                     fullWidth
+                    value={object}
                     onChange={(e) => setObject(e.target.value)}
                 />
                 <br /><br /><br />
@@ -63,6 +78,7 @@ function ConForm() {
                     type='text'
                     fullWidth
                     multiline
+                    value={subject}
                     rows={7}
                     onChange={(e) => setSubject(e.target.value)}
                 />
