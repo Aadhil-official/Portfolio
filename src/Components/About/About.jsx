@@ -1,4 +1,4 @@
-import { Grid, Typography } from "@mui/material";
+import { Avatar, Grid, Typography } from "@mui/material";
 import React from "react";
 import ScrollAnimation from "react-animate-on-scroll";
 import "./styles.css";
@@ -9,6 +9,7 @@ import Springbooticon from '../../assets/whatsapp.png';
 import JSicon from '../../assets/instagram.png';
 import Htmlicon from '../../assets/react-icon.png';
 import Cssicon from '../../assets/linkedin.png';
+import MyPic from '../../assets/MyPic.jpg'
 
 function About() {
   return (
@@ -22,7 +23,7 @@ function About() {
             </Typography>
           </ScrollAnimation><br />
         </Grid>
-        <Grid item xl={6} lg={6} md={6} sm={6} xs={12} className="contentxs">
+        <Grid item xl={6} lg={6} md={6} sm={12} xs={12} className="contentxs">
           <ScrollAnimation animateIn="fadeInLeft" className="animate">
             <Typography variant="body1" className="sub1">
               Hi there! I'm Aadhil, a website developer with a passion for creating custom websites.
@@ -32,9 +33,9 @@ function About() {
           </ScrollAnimation><br />
           <ScrollAnimation animateIn="fadeInLeft" className="animate">
             <Typography variant="body1" className="sub1">
-            Whenever possible, I also apply my passion for developing products with Sringboot and Modern 
-            Javascript Library and Framework React.js 
-            .Also I have done CMS systems with React.js and spring boot.
+              Whenever possible, I also apply my passion for developing products with Sringboot and Modern
+              Javascript Library and Framework React.js
+              .Also I have done CMS systems with React.js and spring boot.
             </Typography>
           </ScrollAnimation><br />
           <ScrollAnimation animateIn="fadeInLeft" className="animate">
@@ -62,7 +63,9 @@ function About() {
             ))}
           </Grid>
         </Grid>
-        <Grid item xl={6} lg={6} md={6} sm={6} xs={12}></Grid>
+        <Grid item xl={6} lg={6} md={6} sm={12} xs={12}>
+          <Avatar src={MyPic} sx={{ width: 300, height: 320,marginRight:'auto', marginLeft:'auto' }}/>
+        </Grid>
       </Grid>
     </>
   )
