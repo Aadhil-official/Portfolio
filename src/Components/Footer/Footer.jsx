@@ -58,16 +58,24 @@ const Footer = () => {
         </Grid>
         <Grid item xl={1} lg={1} md={2} sm={0.5} xs={1}></Grid>
         <Grid item xl={0.36} lg={0.4} md={0.5} sm={0.6} xs={0} sx={{ marginTop: 1.3 }}>
-          <img src={linkedIn} className="logolinkedin" alt="LinkedIn logo" />
+          <Link to="http://linkedin.com/in/mohamed-aadhil-716645248" target='/blank'>
+            <img src={linkedIn} className="logolinkedin" alt="LinkedIn logo" />
+          </Link>
         </Grid>
         <Grid item xl={0.36} lg={0.4} md={0.5} sm={0.6} xs={0} sx={{ marginTop: 1.3 }}>
-          <img src={github} className="logogithub" alt="GitHub logo" />
+          <Link to="https://github.com/Aadhil-official" target='/blank'>
+            <img src={github} className="logogithub" alt="GitHub logo" />
+          </Link>
         </Grid>
         <Grid item xl={0.36} lg={0.4} md={0.5} sm={0.6} xs={0} sx={{ marginTop: 1.3 }}>
-          <img src={wp} className="logowp" alt="Whatsapp logo" />
+          <Link to="https://wa.me/+94750213273" target='/blank'>
+            <img src={wp} className="logowp" alt="Whatsapp logo" />
+          </Link>
         </Grid>
         <Grid item xl={0.36} lg={0.4} md={0.5} sm={0.6} xs={0} sx={{ marginTop: 1.3 }}>
-          <img src={insta} className="logoinsta" alt="Instagram logo" />
+          <Link to="https://www.instagram.com/axdhil_official/" target='/blank'>
+            <img src={insta} className="logoinsta" alt="Instagram logo" />
+          </Link>
         </Grid>
 
       </Grid>

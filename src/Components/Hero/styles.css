@@ -1,17 +1,39 @@
 /* styles.css */
+.sideIcon {
+  z-index: 1000;
+  border-radius: 30px;
+  backdrop-filter: blur(5px);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 5px;
+  padding-left: 5px;
+  gap: 20px;
+  -webkit-backdrop-filter: blur(5px);
+  display: flex;
+  flex-direction: column !important;
+  position: fixed;
+  top: 35%;
+  right: 1%;
+}
+
+@media(max-width: 768px) {
+  .sideIcon{
+    display: none;
+  }
+}
 
 .myname {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
 }
 
-.toppart{
+.toppart {
   padding-top: 10%;
   padding-left: 80px;
 }
 
 @media(min-width : 960px) {
   .illustration {
-    margin-top:-80px;
+    margin-top: -80px;
     width: 80vmin;
   }
 }
@@ -53,9 +75,11 @@
     /* display: none; */
     /* transform: translateY(250px); */
   }
-99%{
-  opacity: 1;
-}
+
+  99% {
+    opacity: 1;
+  }
+
   100% {
     opacity: 0;
     /* display: block; */
@@ -70,9 +94,11 @@
     /* display: none; */
     /* transform: translateY(250px); */
   }
-99%{
-  opacity: 0;
-}
+
+  99% {
+    opacity: 0;
+  }
+
   100% {
     opacity: 1;
     /* display: block; */
@@ -105,6 +131,18 @@
   }
 }
 
+@keyframes fadeInRightForSide {
+  from {
+    opacity: 1;
+    transform: translateX(250px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
 .fadeInUp {
   animation-name: fadeInUp;
 }
@@ -124,6 +162,10 @@
 
 .fadeInRight {
   animation-name: fadeInRight;
+}
+
+.fadeInRightForSide {
+  animation-name: fadeInRightForSide;
 }
 
 .animate {

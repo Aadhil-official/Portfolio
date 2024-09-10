@@ -73,16 +73,16 @@ const Header = () => {
 
   return (
     <>
-      <AppBar position="sticky" sx={{padding:'10px'}}>
+      <AppBar position="sticky" sx={{ padding: '10px' }}>
         {/* <Toolbar sx={{width:'97%'}}> */}
         <Grid container position='absolute'>
           {/* <ThemeProvider theme={theme1}> */}
-            <Grid item xl={3} lg={3.7} md={3.4} sm={3} xs={3} textAlign='center'>
-              <HashLink smooth to="#home" className='navlogo'>
-                <Typography sx={{ m: 1, color: isDarkMode ? 'white' : 'black' }} variant="h4">{"<#Axd"}
-                  {"hil>"}</Typography>
-              </HashLink>
-            </Grid>
+          <Grid item xl={3} lg={3.7} md={3.4} sm={3} xs={3} textAlign='center'>
+            <HashLink smooth to="#home" className='navlogo'>
+              <Typography sx={{ m: 1, color: isDarkMode ? 'white' : 'black' }} variant="h4">{"<#Axd"}
+                {"hil>"}</Typography>
+            </HashLink>
+          </Grid>
           {/* </ThemeProvider> */}
           <ThemeProvider theme={theme1}>
             <Grid item xl={1} lg={1.2} md={1.1} sm={1.2} xs={1.2}>
@@ -114,7 +114,7 @@ const Header = () => {
             <FormControlLabel
               control={
                 <MaterialUISwitch
-                  sx={{ m: 1.3,mr:-2 }}
+                  sx={{ m: 1.3, mr: -2 }}
                   checked={isDarkMode}
                   onChange={toggleTheme}
                 // inputProps={{ 'aria-label': 'controlled' }}
