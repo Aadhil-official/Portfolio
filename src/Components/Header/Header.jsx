@@ -90,7 +90,7 @@ const Header = () => {
                 <Typography variant="h6" sx={{ m: 2.3, color: isDarkMode ? 'white' : 'black' }}>HOME</Typography>
               </NavHashLink>
             </Grid>
-            {/* <Grid item xl={0} lg={0} md={0} sm={0} xs={0}></Grid> */}
+            
             <Grid item xl={1.5} lg={1.8} md={1.85} sm={2.25} xs={1.8}>
               <NavHashLink className='navcontent' smooth to="#about">
                 <Typography variant="h6" sx={{ m: 2.3, color: isDarkMode ? 'white' : 'black' }}>ABOUT&nbsp;&nbsp;ME</Typography>
