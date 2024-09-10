@@ -17,6 +17,8 @@
     "@mui/material": "^5.15.18",
     "animate.css": "^4.1.1",
     "axios": "^1.7.2",
+    "framer-motion": "^12.0.0-alpha.0",
+    "port": "file:",
     "react": "^18.2.0",
     "react-animate-on-scroll": "^2.1.9",
     "react-dom": "^18.2.0",

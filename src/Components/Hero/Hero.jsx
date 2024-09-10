@@ -4,9 +4,12 @@ import React from "react"
 import Hello from '../../assets/Hello.gif'
 import { Grid, Typography } from "@mui/material"
 import ScrollAnimation from "react-animate-on-scroll"
-import Illustration from '../../assets/illustration.png'
 import ReactTypingEffect from "react-typing-effect"
 import { createTheme, ThemeProvider, responsiveFontSizes } from '@mui/material/styles';
+// import LinkedIn from '../../assets/Linkedin.png';
+import GIT from '../../assets/github.png';
+import Inst from '../../assets/instagram.png';
+import WP from '../../assets/whatsapp.png';
 
 function Hero() {
 
@@ -15,6 +18,14 @@ function Hero() {
 
   return (
     <>
+      <Grid container position='absolute'>
+        <Grid item xs={12} sx={{ display: "block", marginRight: '5px' }} textAlign='right'>
+          {/* <img src={LinkedIn} alt="LinkedIn" width="40px"/> */}
+          <img src={GIT} alt="Git" width="40px" />
+          <img src={WP} alt="Whatsapp" width="40px" />
+          <img src={Inst} alt="Instagram" width="40px" />
+        </Grid>
+      </Grid>
       <Grid container id="home">
         <Grid item xl={12} lg={12} md={12} sm={12} xs={12} >
           <Typography variant="h5" className="toppart">
@@ -73,13 +84,17 @@ function Hero() {
           <Grid item xl={3} lg={2} md={2} sm={2} xs={12}></Grid>
 
           <Grid item xl={3} lg={3} md={3} sm={0} xs={0}>
-            <img src={Illustration} alt="Illustration png"
+            {/* <img src={Illustration} alt="Illustration png"
               style={{ position: 'absolute', animationDelay: "0.5s" }}
               className="illustration animate fadeInRight"
+            /> */}
+            <img src="https://user-images.githubusercontent.com/74038190/229223156-0cbdaba9-3128-4d8e-8719-b6b4cf741b67.gif"
+              style={{ width: "350px", position: 'absolute', animationDelay: "0.5s" }}
+              className="illustration animate fadeInRight"
             />
-            <ScrollAnimation animateIn="fadeInRight" className="animate" delay={0.2 * 1000}>
-              <img src={Illustration} className="illustration" alt="Illustration png" />
-            </ScrollAnimation>
+            {/* <ScrollAnimation animateIn="fadeInRight" className="animate" delay={0.2 * 1000}> */}
+            {/* <img src={Illustration} className="illustration" alt="Illustration png" /> */}
+            {/* </ScrollAnimation> */}
           </Grid>
         </ThemeProvider>
       </Grid >

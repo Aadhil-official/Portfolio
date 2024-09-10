@@ -73,7 +73,7 @@ const Header = () => {
 
   return (
     <>
-      <AppBar position="sticky">
+      <AppBar position="sticky" sx={{padding:'10px'}}>
         {/* <Toolbar sx={{width:'97%'}}> */}
         <Grid container position='absolute'>
           {/* <ThemeProvider theme={theme1}> */}

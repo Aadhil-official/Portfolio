@@ -3,13 +3,21 @@ import React from "react";
 import ScrollAnimation from "react-animate-on-scroll";
 import "./styles.css";
 import Reacticon from '../../assets/react-icon.png';
-import Boostrapicon from '../../assets/linkedin.png';
-import Viteicon from '../../assets/github.png';
-import Springbooticon from '../../assets/whatsapp.png';
-import JSicon from '../../assets/instagram.png';
-import Htmlicon from '../../assets/react-icon.png';
-import Cssicon from '../../assets/linkedin.png';
+import Boostrapicon from '../../assets/Git.svg';
+import Viteicon from '../../assets/Figma-Dark.svg';
+import Springbooticon from '../../assets/Spring-Dark.svg';
+import JSicon from '../../assets/Idea-Dark.svg';
+import Htmlicon from '../../assets/html-icon.png';
+import Cssicon from '../../assets/css.png';
 import MyPic from '../../assets/MyPic.jpg'
+import AWS from '../../assets/aws.svg';
+import Blender from '../../assets/blender.svg';
+import Bootstrap from '../../assets/Bootstrap.svg';
+import CLang from '../../assets/C.svg';
+import CLion from '../../assets/CLion-Dark.svg';
+import Postman from '../../assets/Postman.svg';
+import Linux from '../../assets/Linux-Dark.svg';
+import VSCode from '../../assets/VSCode-Dark.svg';
 
 function About() {
   return (
@@ -53,7 +61,7 @@ function About() {
 
 
           <Grid container spacing={2} className="hability">
-            {[Cssicon, Htmlicon, JSicon, Springbooticon, Viteicon, Boostrapicon, Reacticon, Viteicon, Springbooticon, Htmlicon].map((icon, index) => (
+            {[Htmlicon, Cssicon, Springbooticon, Reacticon, CLang, Boostrapicon, AWS, VSCode, CLion, JSicon, Linux, Postman, Blender, Bootstrap, Viteicon].map((icon, index) => (
               <><Grid></Grid>
                 <Grid item xs={3.6} sm={2.7} md={1.8} key={index} className="hability">
                   <ScrollAnimation animateIn="fadeInUp" delay={(0.10 + index * 0.02) * 1000}>
